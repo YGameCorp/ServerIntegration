@@ -23,9 +23,10 @@
 - To send a message, your Game Server issues a POST request.
 
 		URL: https://api.nivi.vn/v1/user/user_info
-		If you build in the TEST MODE, use the domain:
+	If you build in the TEST MODE, use the domain:
+	
 		URL: https://devsdk.nivi.vn:9101/v1/user/user_info
-[Read here for more detail about how to setup the enviroment] (https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
+	[Read here for more detail about how to setup the enviroment] (https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
 	
 | Name        | Description           |
 | ------------- |:-------------:|
