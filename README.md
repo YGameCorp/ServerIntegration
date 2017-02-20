@@ -4,9 +4,9 @@
 
 ..1. Flow
 	
-	![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/get_user_info.png)
+![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/get_user_info.png)
 	
-	<img src='http://i.imgur.com/nzW1SHa.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/nzW1SHa.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 	
 	
 ..2. Description 
