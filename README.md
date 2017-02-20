@@ -1,4 +1,4 @@
-# ServerIntegration
+# Server Integration
 
 ## 1. Get User Information
 
@@ -24,8 +24,9 @@
 
 		URL: https://api.nivi.vn/v1/user/user_info
 		If you build in the TEST MODE, use the domain:
-		URL: https://devsdk.nivi.vn:9101/v1/user/user_info	
-
+		URL: https://devsdk.nivi.vn:9101/v1/user/user_info
+		[Read here for more detail](https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
+	
 | Name        | Description           |
 | ------------- |:-------------:|
 | accessToken      | Get from Xlauncher system |
@@ -75,7 +76,7 @@ If your request is not valid, you will be received the failure response
 NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server to client (like game using HTTP POST/GET to connect to server).  
 ```
 * 2.3 Server Game Callback URL
-- This is your own API to received the payment success request from Xlauncher Server. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
+- This is your own API to received the payment success request from Xlauncher Server. Please build your API in GET method. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
 
 | Name        | Description           |
 | ------------- |:-------------:|
