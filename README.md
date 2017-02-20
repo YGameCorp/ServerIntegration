@@ -1,7 +1,7 @@
 # Server Integration
 
 ## 1. Get User Information
-[aaaa] (http://google.com)
+
 * 1.1 Flow
 	
 ![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/get_user_info.png)
@@ -25,7 +25,7 @@
 		URL: https://api.nivi.vn/v1/user/user_info
 		If you build in the TEST MODE, use the domain:
 		URL: https://devsdk.nivi.vn:9101/v1/user/user_info
-		[Read here for more detail](https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
+[Read here for more detail about how to setup the enviroment] (https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
 	
 | Name        | Description           |
 | ------------- |:-------------:|
