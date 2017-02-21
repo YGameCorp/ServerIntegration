@@ -28,11 +28,11 @@
 		URL: https://devsdk.nivi.vn:9101/v1/user/user_info
 	[Read here for more detail about how to setup the enviroment] (https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
 	
-| Name        | Description           |
-| ------------- |:-------------:|
-| accessToken      | Get from Xlauncher system |
-| appId      | The id of your application is issued by XCT      |
-| sign | Md5 (accessToken + appId + appKey) "appKey: the secret key of your application is issued by XCT"|
+| Name        | Description           | Note           |
+| ------------- |:-------------:|:-------------:|
+| accessToken      | Get from Xlauncher system ||
+| appId      | The id of your application is issued by XCT      ||
+| sign | Md5 (accessToken + appId + appKey) |appKey: the secret key of your application is issued by XCT|
 
 A successful response will contain your user information in JSON format:
 ```json
