@@ -1,102 +1,24 @@
-# ServerIntegration
+# Create the signature from request parameters
 
-## 1. Get User Information
+- This is the sample how to create the signature from request parameters. For example, we have some parameters below
 
-* 1.1 Flow
-	
-![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/get_user_info.png)
-	
-	
-* 1.2. Description 
+		amount=0.99&app_id=ea2d5a18ebbd43871103b502f804db79&response_time=2017-01-10 17:11:33&transaction_id=43093285&transaction_type=CARD&currency=VND&game_order=1147277470600214&user_id=217&order_id=ffc9447c6c45b1d1a6ecbdfbd3a1aa21&card_code=xxxxxxxx&card_serial=yyyyyyy&card_vendor=viettel
 
-		1. Game Client calls a Xlauncher function, then SDK show up the Login UI.
-		2. Xlauncher Client sends a login request to Xlauncher server to validate the user info.
-		3. Xlauncher Client  receives the user info and accessToken from Xlauncher server.
-		4. Xlauncher Client transfer the accessToken and user info to Game Client in order to notify there is a user login to game.
-		5. Game Client create a login request with the accessToken and send it to Game Server.
-		6. Game Server get the user information by sending the request to Xlauncher server API with the accessToken as a parameter.
-		7. Game Server receives User information from the Xlauncher Server.
-		8. Game Client receives Login Response and let the user join game.
+- Step 1: sort the name of parameters by A → Z
 
-* 1.3 Xlauncher server API
-- When users login or register to Xlauncher system successfully, The access token will be passed from Xlauncher system to your client. Access token is used to get the user information from your server-side.  
-- To send a message, your Game Server issues a POST request.
+		amount > app_id > card_code > card_serial > card_vendor > currency > game_order > order_id > response_time > transaction_id > transaction_type > user_id
 
-		URL: https://api.nivi.vn/v1/user/user_info
-		If you build in the TEST MODE, use the domain:
-		URL: https://devsdk.nivi.vn:9101/v1/user/user_info	
+- Step 2: get the values from ordered parameters. We have the final String
 
-| Name        | Description           |
-| ------------- |:-------------:|
-| accessToken      | Get from Xlauncher system |
-| appId      | The id of your application is issued by XCT      |
-| sign | Md5 (accessToken + appId + appKey) "appKey: the secret key of your application is issued by XCT"|
+		values = 0.99ea2d5a18ebbd43871103b502f804db79xxxxxxxxyyyyyyyviettelVND1147277470600214ffc9447c6c45b1d1a6ecbdfbd3a1aa212017-01-10 17:11:3343093285CARD217
 
-A successful response will contain your user information in JSON format:
-```json
-{
-"status":1,
-"msg":"",
-"accessToken":"a0a6e4e4caebb1d799b7b49ed45ff71c",
-"accessExpires":1474444768875,
-"data":{
-"userId":100,
-"username":"nivi100",
-"dateCreate":"2016-09-20 14:59:28",
-"dateUpdate":"2016-09-21 14:59:28"
-}
-}
+- Step 3: create the signature
+
 ```
+sign = md5( values + appSecret )
+* appSecret: the secret key of your application is issued by XCT
 
-If your request is not valid, you will be received the failure response
-```json
-{
-"status":0,
-"msg":"error description",
-} 
+For example:
+var appSecret = "ff9af584ad6c9328930f3925f2c973f0"
+sign = md5 ( values + appSecret ) = 16f97f19fe1ded03bb3e175b19a0709e
 ```
-
-## 2. Payment
-* 2.1 Flow
-	
-![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/payment_flow.png)
-
-* 2.2 Description
-```
-1. Game Client calls a Xlauncher function, then SDK show up the Payment UI.
-2. Xlauncher Client sends a payment request to Xlauncher server.
-3.  After processing the payment, Xlauncher Server will send the notification to your Game Server via your callback url. Game Server will transfer game coin to user. 
-4. Game Server return the payment response to Xlauncher Server.
-4.1. If game is based on socket technology, Game Server may notify the payment result to user at this time. 
-5. Xlauncher Client  receives the payment info from Xlauncher server.
-6. Xlauncher Client calls Game Client function to notify there is a payment. 
-6.1. Game Client  send a request to Game Server to check there is this payment or not.
-6.2. If there is a successful payment, Game Client will notify the result to user.
-NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server to client (like game using HTTP POST/GET to connect to server).  
-```
-* 2.3 Server Game Callback URL
-- This is your own API to received the payment success request from Xlauncher Server. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
-
-| Name        | Description           |
-| ------------- |:-------------:|
-| amount      | Value of the purchase |
-| app_id      | The id of your application is issued by XCT      |
-| response_time | Purchase time|
-| transaction_id | id of the transaction|
-| transaction_type | Type of purchase: CARD, GOOGLE, APPLE|
-| currency | VN or USD |
-| game_order | your payment extra data. This is the simple string and the maximum length is 50 char|
-| user_id | id of user, who make the request|
-| order_id | order id|
-| card_code | * if transaction_type = CARD, card_code = code|
-| card_serial | * if transaction_type = CARD, card_serial = serial|
-| card_vendor | * if transaction_type = CARD, card_vendor = name|
-| sign | Used to verify the request. See the appendix A to know how to verify the signature|
-
-- Your API must be response the result in the JSON format as description in the table below
-
-| Response        |JSON Format            |
-| ------------- |:-------------:|
-| success response      | {"status": "1", "msg":""} |
-| Failure response      | {"status": "0", "msg":"reason"} |
-
