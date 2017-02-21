@@ -4,7 +4,7 @@
 
 * Step 1: In the client side of Xlauncher (android and ios), use the function setDomainDebug(false)
 
-* Step 2: In your server game, call to the live domain of Xlauncher server at api.nivi.vn
+* Step 2: In your server game, call to the live domain of Xlauncher server at https://api.nivi.vn
 
 
 
@@ -13,7 +13,7 @@
 
 * Step 1: In the client side of Xlauncher (android and ios), use the function setDomainDebug(true)
 
-* Step 2: In your server game, call to the live domain of Xlauncher server at devsdk.nivi.vn
+* Step 2: In your server game, call to the live domain of Xlauncher server at https://devsdk.nivi.vn
 
 
 
