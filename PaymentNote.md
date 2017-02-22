@@ -1,4 +1,4 @@
-# How to use Xlauncher Payment System Flexible 
+# How To Use Xlauncher Payment System Flexible 
 
 ## 1. What's the problem
 XCTCorp is one of the famous publisher in Vietnam. We already have published many games such as action game, role playing game, card battle ... We used to be facing in different payment scenarios when connect and publish these games. A payment scenarios means the action when user purchase the digital goods in game. 
@@ -69,8 +69,20 @@ if(type.equals(coin)){
     //add coin for user
     
 }else if(type.equals(item)){
-    //add the cup of tea
-    
+    /*
+        check the value of purchase with the price of item (0.99$). If the amount parameter greater than 0.99$, add the item and some coins. If amount less than 0.99$, add some coins
+        
+        */
+    if(amount < 0.99){
+        //add coin for user
+        
+    }else if(amount == 0.99){
+        //add the cup of tea
+        
+    }else{
+        //add coin and the cup of tea
+        
+    }
 }
 ```
 
