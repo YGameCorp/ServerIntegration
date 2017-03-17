@@ -26,7 +26,7 @@
 	If you build in the TEST MODE, use the domain:
 	
 		URL: https://devsdk.nivi.vn:9101/v1/user/user_info
-	[Read here for more detail about how to setup the enviroment] (https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
+[Read here for more detail about how to setup the enviroment](https://github.com/xctcorporation/ServerIntegration/blob/master/SetupTheEnviroment.md)
 	
 | Name        | Description           | Note           |
 | ------------- |:-------------:|:-------------:|
@@ -95,7 +95,7 @@ NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server 
 | card_vendor | * if transaction_type = CARD, card_vendor = name|
 | sign | Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md) |
  
- [Read here for more detail about how to use the payment extra data flexible (PED)] (https://github.com/xctcorporation/ServerIntegration/blob/master/PaymentNote.md)
+ [Read here for more detail about how to use the payment extra data flexible (PED)](https://github.com/xctcorporation/ServerIntegration/blob/master/PaymentNote.md)
 
 - Your API must be response the result in the JSON format as description in the table below
 
