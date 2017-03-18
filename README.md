@@ -82,12 +82,12 @@ NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server 
 | Name        | Description           |
 | ------------- |:-------------:|
 | amount      | Value of the purchase |
-| app_id      | The id of your application is issued by XCT      |
+| app_id      | The id of your application is issued by XCT, use this parameter to classify android and ios       |
 | response_time | Purchase time|
 | transaction_id | id of the transaction|
 | transaction_type | Type of purchase: CARD, GOOGLE, APPLE|
 | currency | VN or USD |
-| game_order | your payment extra data. This is the simple string and the maximum length is 50 char|
+| game_order | your payment extra data (PED). This is the simple string and the maximum length is 50 char|
 | user_id | id of user, who make the request|
 | order_id | order id|
 | card_code | * if transaction_type = CARD, card_code = code|
