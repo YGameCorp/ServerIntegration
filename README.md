@@ -2,12 +2,12 @@
 
 ## 1. Get User Information
 
-* 1.1 Flow
+### 1.1 Flow
 	
 ![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/get_user_info.png)
 	
 	
-* 1.2. Description 
+### 1.2. Description 
 
 		1. Game Client calls a Xlauncher function, then SDK show up the Login UI.
 		2. Xlauncher Client sends a login request to Xlauncher server to validate the user info.
@@ -18,7 +18,7 @@
 		7. Game Server receives User information from the Xlauncher Server.
 		8. Game Client receives Login Response and let the user join game.
 
-* 1.3 Xlauncher server API
+### 1.3 Xlauncher server API
 - When users login or register to Xlauncher system successfully, The access token will be passed from Xlauncher system to your client. Access token is used to get the user information from your server-side.  
 - To send a message, your Game Server issues a POST request.
 
@@ -59,11 +59,11 @@ If your request is not valid, you will be received the failure response
 ```
 
 ## 2. Payment
-* 2.1 Flow
+### 2.1 Flow
 	
 ![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/payment_flow.png)
 
-* 2.2 Description
+### 2.2 Description
 ```
 1. Game Client calls a Xlauncher function, then SDK show up the Payment UI.
 2. Xlauncher Client sends a payment request to Xlauncher server.
@@ -76,7 +76,7 @@ If your request is not valid, you will be received the failure response
 6.2. If there is a successful payment, Game Client will notify the result to user.
 NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server to client (like game using HTTP POST/GET to connect to server).  
 ```
-* 2.3 Server Game Callback URL
+### 2.3 Server Game Callback URL
 - This is your own API to received the payment success request from Xlauncher Server. Please build your API in GET method. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
 
 | Name        | Description           |
@@ -103,4 +103,3 @@ NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server 
 | ------------- |:-------------:|
 | success response      | {"status": "1", "msg":""} |
 | Failure response      | {"status": "0", "msg":"reason"} |
-
