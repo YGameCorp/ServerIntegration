@@ -48,7 +48,7 @@ When the Xlauncher server process the payment successfully. Xlauncher server wil
 - amount: Value of the purchase. In this example is 0.99
 - game_order: the PED
 
-[Read here for full parameters] (https://github.com/xctcorporation/ServerIntegration#2-payment)
+[Read here for full parameters](https://github.com/xctcorporation/ServerIntegration#2-payment)
 
 When your server game received the request parameter from Xlauncher server. Just do some simple steps below to classify what package user want to buy
 
