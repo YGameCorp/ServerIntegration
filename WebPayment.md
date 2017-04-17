@@ -3,11 +3,11 @@ This is the XCT Payment System on Web. User can purchase the game content by usi
 ## 1. Flow
 ![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/web_payment_flow.jpg)
 
-1.1: User login to XCT System by using the nivi account
-1.2: API get list server game. This is the HTTP GET provided by Server Game to return the list of server game 
-1.3: API get list payment. This is the HTTP GET provided by Server Game to return all purchase packages which offer in the game
-1.4: Pay with XCT System. XCT provide some payment method such as Card, Banking ...
-1.5: API payment success. Called when user make the payment successfully
+- 1.1: User login to XCT System by using the nivi account
+- 1.2: API get list server game. This is the HTTP GET provided by Server Game to return the list of server game 
+- 1.3: API get list payment. This is the HTTP GET provided by Server Game to return all purchase packages which offer in the game
+- 1.4: Pay with XCT System. XCT provide some payment method such as Card, Banking ...
+- 1.5: API payment success. Called when user make the payment successfully
 
 ## 1. API get list server game
 This is your own API to return the list of server game to XCT payment system.
