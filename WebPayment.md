@@ -51,6 +51,7 @@ This is your own API to return the list payment packages of your game
   ]
 }
 ```
+Icon size: 210 x 130
 
 ## 3. API payment success
 - This is your own API to received the payment success request from Xlauncher Server. Please build your API in GET method. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
