@@ -34,6 +34,11 @@ This is your own API to return the list payment packages of your game
 ![alt text](https://github.com/xctcorporation/ServerIntegration/blob/master/payment_packages.png)
 
 - Method: HTTP GET
+- Params: 
+  + xct_id: id of xct account
+  + char_id: id of character in game
+  + server_id: id of server game
+  + sign: Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md)
 - Response: return the result in json format. For example: the response is corresponding to the screenshot above
 ```
 {
