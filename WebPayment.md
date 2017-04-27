@@ -16,7 +16,8 @@ This is your own API to return the list of server game to XCT payment system.
 - Params: 
   + app_id: The id of your application is issued by XCT, use this parameter to classify android and ios
   + xct_id: id of xct account
-  + sign: Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md#21-api-get-list-server-game)
+  + sign: Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md#21-api-get-list-server-game)
+  
 - Response: return the result in json format. For example: your game has four server games. The response will be returned as below
 ```
 {
@@ -39,6 +40,7 @@ This is your own API to return the list of characters in game
   + xct_id: id of xct account
   + server_id: id of server game. Get from the previous step
   + sign: Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md#22-api-get-list-characters)
+  
 - Response: return the result in json format. For example: A user have three characters in the server S2. Their names are herror, warrior, king. The result will be returned as below
 ```
 {
@@ -63,6 +65,7 @@ This is your own API to return the list payment packages of your game
   + char_id: id of character in game. Get from the previous step
   + server_id: id of server game
   + sign: Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md#23-api-get-list-payment)
+  
 - Response: return the result in json format. For example: the response is corresponding to the screenshot above
 ```
 {
