@@ -93,7 +93,7 @@ NOTE: Step 6.1 and 6.2 just use for the game can’t send a message from server 
 | card_code | * if transaction_type = CARD, card_code = code|
 | card_serial | * if transaction_type = CARD, card_serial = serial|
 | card_vendor | * if transaction_type = CARD, card_vendor = name|
-| sign | Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md) |
+| sign | Used to verify the request. [Click here to know how to verify the signature](https://github.com/xctcorporation/ServerIntegration/blob/master/HowToCreateSignature.md#1-sdk-payment-callback) |
  
  [Read here for more detail about how to use the payment extra data flexible (PED)](https://github.com/xctcorporation/ServerIntegration/blob/master/PaymentNote.md)
 
