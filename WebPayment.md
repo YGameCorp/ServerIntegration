@@ -72,19 +72,22 @@ This is your own API to return the list payment packages of your game
   "status":1,
   "msg":"",
   "data":[
-    {"name":"80 Nguyen Bao","id":"80_nb","image_url":"http://xxx", "price":20000, "type":"coin"},
-    {"name":"200 Nguyen Bao","id":"200_nb","image_url":"http://xxx", "price":50000, "type":"coin"},
-    {"name":"400 Nguyen Bao","id":"400_nb","image_url":"http://xxx", "price":100000, "type":"coin"},
-    {"name":"2000 Nguyen Bao","id":"2000_nb","image_url":"http://xxx", "price":500000, "type":"coin"},
-    {"name":"4000 Nguyen Bao","id":"4000_nb","image_url":"http://xxx", "price":1000000, "type":"coin"},
-    {"name":"6000 Nguyen Bao","id":"6000_nb","image_url":"http://xxx", "price":1500000, "type":"coin"},
-    {"name":"20000 Nguyen Bao","id":"20000_nb","image_url":"http://xxx", "price":5000000, "type":"coin"},
+    {"name":"80 Nguyen Bao","id":"80_nb","image_url":"http://xxx", "price":20000, "type":"normal"},
+    {"name":"200 Nguyen Bao","id":"200_nb","image_url":"http://xxx", "price":50000, "type":"normal"},
+    {"name":"400 Nguyen Bao","id":"400_nb","image_url":"http://xxx", "price":100000, "type":"normal"},
+    {"name":"2000 Nguyen Bao","id":"2000_nb","image_url":"http://xxx", "price":500000, "type":"normal"},
+    {"name":"4000 Nguyen Bao","id":"4000_nb","image_url":"http://xxx", "price":1000000, "type":"normal"},
+    {"name":"6000 Nguyen Bao","id":"6000_nb","image_url":"http://xxx", "price":1500000, "type":"normal"},
+    {"name":"20000 Nguyen Bao","id":"20000_nb","image_url":"http://xxx", "price":5000000, "type":"normal"},
     {"name":"350kc /ngay","id":"350kc","image_url":"http://xxx", "price":10000000, "type":"special"},
     {"name":"450kc /ngay","id":"450kc","image_url":"http://xxx", "price":10000000, "type":"special"}
   ]
 }
 ```
-Icon size: 210 x 130
+- Icon size: 210 x 130
+- Type:
+  + normal: normal package, for example, purchare for gold, coin
+  + special: some special packages, for example: weekly, daily
 
 ## 3. API payment success
 - This is your own API to received the payment success request from Xlauncher Server. Please build your API in GET method. When users finish the payment transaction in Xlauncher system, Xlauncher server will send the notification to your application server-side via your callback url with the following parameters.
